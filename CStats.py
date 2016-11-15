@@ -1,41 +1,36 @@
 
 
-
-
-
-
 class Player:
-    def __init__(self, Race=0, PClass=0, Name=0):
-        print("Please choose a Race, Class, and Name to begin."
+    def __init__(self):
+        print("Please choose a race, class, and name to begin."
               " You will start at level 1 with 0 experience.")
-        self.Race = input("1. Race\n Choose: Dwarf, Elf, Human")
-        self.PClass = input("2. Class\n Choose: Fighter, Wizard, Cleric, Rogue")
-        self.Name = input("3. Name\n What is your name?")
-        self.level = 1
-        self.xp = 0
-        self.plane = "Material Plane"
-        '''return print(str(self.Name + ", the " + self.Race + " " + self.PClass + ". " +"Level: " +
-                         str(self.level) +" Experience: "+ str(self.xp)))'''
+        self.Race = input("1. Race\n Choose: Dwarf, Elf, Human \n")
+        self.PClass = input("2. Class\n Choose: Fighter, Wizard, Cleric, Rogue\n")
+        self.Name = input("3. Name\n What is your name?\n")
+        self.Level = 1
+        self.XP = 0
+        self.Plane = "Material Plane"
+        print(str(self.Name + ", the " + self.Race + " " + self.PClass + ". " +"Level: " +
+                         str(self.Level) +" Experience: "+ str(self.XP)))
+
+
+CSL1 = Player()
+CSL2 = "Empty"
+CSL3 = "Empty"
 
 print("Saving...")
 print("Saving...")
 print("Saving...")
-print("Stats have been saved for " + "Player(Name)" + ".")
+print("Stats have been saved for " + str(CSL1.Name) + ".")
 print("")
 
 print("Available characters: ")
-
-CSL1 = Player(Race, PClass, Name)
-
-
-class Account:
-    def __init__(self, name=0, money=0):
-        self.name = name
-        self.money = money
+print(CSL1.Name)
+print(CSL2)
+print(CSL3)
 
 
-UI = input("What's your name? -->")
-account = Account(UI, 10000)
-
-
-
+CSL1.Level+=1
+MajorInfo =(str(CSL1.Name +" " + CSL1.Race + " " + CSL1.PClass + ". " +"Level: " +
+                         str(CSL1.Level) +" Experience: "+ str(CSL1.XP)))
+print("\n" + MajorInfo)
